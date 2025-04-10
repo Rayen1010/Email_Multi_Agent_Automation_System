@@ -1,0 +1,11 @@
+google-auth
+google-auth-oauthlib
+google-api-python-client
+langchain-community
+langchain
+langgraph
+langsmith
+beautifulsoup4
+
+
+#dont write versions to avoid conflicts , pip will handle it 

@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"  # Expose Ollama's API port
+    volumes:
+      - ollama_data:/root/.ollama  # Persist Ollama data
+
+  email_automation:
+    build: .  # Build the Docker image using the Dockerfile in the current directory
+    env_file:
+      - .env  # Load environment variables from .env file
+    depends_on:
+      - ollama  # Ensure Ollama service starts first
+    ports:
+      - "8000:8000"  # Expose port 8000 for your application (adjust as needed)
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+
+volumes:
+  ollama_data:  # Define a volume for Ollama data persistence

@@ -1,0 +1,13 @@
+to build an image : 
+docker build -t email_automation . 
+-----> This is the command used to build a Docker image from a Dockerfile and a build context.
+----->The -t flag (short for --tag) is used to give a name (and optionally a tag) to the Docker image being built.
+      In this case, email_automation is the name of the image.
+
+. (the dot at the end)
+-----> The . specifies the build context, which is the directory where the Dockerfile and any files needed for the build are located.
+----->Docker uses this directory as the working directory during the build process.
+----->The . refers to the current directory, (here its the Email_Multi_Agent_Automation_System) meaning Docker will:
+           Look for a file named Dockerfile in the current directory.
+           Use all files and subdirectories in the current directory as the build context.      
+

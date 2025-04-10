@@ -1,0 +1,3 @@
+version: '3.8'
+This specifies the version of the Docker Compose file format. Version 3.8 is one of the latest versions and is widely used.
+
